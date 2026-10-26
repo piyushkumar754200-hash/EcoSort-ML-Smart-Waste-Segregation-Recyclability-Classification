@@ -7,9 +7,15 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app/backend
 
 COPY backend/requirements.txt ./requirements.txt
+
 RUN pip install --no-cache-dir --default-timeout=300 --retries=10 -r requirements.txt
 
 COPY backend/ ./
+
+COPY artifacts/models/ /app/artifacts/models/
+COPY artifacts/metrics/ /app/artifacts/metrics/
+
+RUN mkdir -p /app/artifacts/thumbnails
 
 EXPOSE 8000
 
