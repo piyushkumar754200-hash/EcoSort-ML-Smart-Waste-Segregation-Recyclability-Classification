@@ -1,0 +1,47 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-sqlite:///./data/ecosort.db}
+      - MODEL_ONNX_PATH=/app/artifacts/models/model.onnx
+      - MODEL_CARD_PATH=/app/artifacts/models/model_card.json
+      - METRICS_PATH=/app/artifacts/metrics/metrics.json
+      - CONFIDENCE_THRESHOLD=${CONFIDENCE_THRESHOLD:-0.50}
+    volumes:
+      - ecosort_data:/app/backend/data
+      - ./artifacts:/app/artifacts
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    profiles: ["postgres"]
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-ecosort}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ecosort_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-ecosort}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  ecosort_data:
+  pg_data:

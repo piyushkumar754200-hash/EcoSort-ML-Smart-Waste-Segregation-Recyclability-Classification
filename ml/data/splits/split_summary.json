@@ -1,0 +1,46 @@
+{
+  "seed": 42,
+  "total_deduplicated": 5969,
+  "field_eval_reserved": 213,
+  "splits": {
+    "train": {
+      "total": 4028,
+      "per_class": {
+        "glass": 691,
+        "metal": 712,
+        "organic": 684,
+        "paper": 1236,
+        "plastic": 705
+      }
+    },
+    "val": {
+      "total": 865,
+      "per_class": {
+        "glass": 148,
+        "metal": 153,
+        "organic": 147,
+        "paper": 265,
+        "plastic": 152
+      }
+    },
+    "test": {
+      "total": 866,
+      "per_class": {
+        "glass": 149,
+        "metal": 153,
+        "organic": 147,
+        "paper": 266,
+        "plastic": 151
+      }
+    },
+    "field_eval": {
+      "glass": 42,
+      "metal": 43,
+      "organic": 42,
+      "paper": 42,
+      "plastic": 44
+    }
+  },
+  "zero_cross_split_hash_leakage": true,
+  "zero_field_eval_leakage": true
+}

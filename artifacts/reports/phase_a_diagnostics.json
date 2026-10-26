@@ -1,0 +1,38 @@
+{
+  "failing_image": "tests/fixtures/field/plastic_bottle_grass_01.jpg",
+  "dimensions": [
+    194,
+    259
+  ],
+  "v1_center_crop_pixels_lost_vertically": 118,
+  "v1_gradcam_peripheral_energy_ratio": 0.6644,
+  "correct_plastic_gradcam_peripheral_energy_ratio": 0.4361,
+  "v1_centercrop_top3": [
+    {
+      "category": "glass",
+      "probability": 0.4582
+    },
+    {
+      "category": "metal",
+      "probability": 0.2135
+    },
+    {
+      "category": "plastic",
+      "probability": 0.179
+    }
+  ],
+  "v1_letterbox_only_top3": [
+    {
+      "category": "plastic",
+      "probability": 0.3842
+    },
+    {
+      "category": "glass",
+      "probability": 0.3422
+    },
+    {
+      "category": "metal",
+      "probability": 0.1411
+    }
+  ]
+}

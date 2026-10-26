@@ -1,0 +1,6 @@
+{
+  "name": "EcoSort ML — Smart Waste Segregation & Recyclability Classification",
+  "description": "Production-grade AI waste segregation and recyclability classification platform powered by EfficientNet-B0 & ONNX Runtime across plastic, paper, metal, glass, and organic waste streams.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

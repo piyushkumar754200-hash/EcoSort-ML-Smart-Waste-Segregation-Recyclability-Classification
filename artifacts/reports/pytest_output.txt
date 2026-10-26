@@ -1,0 +1,116 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.4, pluggy-1.7.0 -- /app/applet/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /app/applet
+plugins: cov-6.0.0, anyio-4.15.1, asyncio-0.25.0, platformdirs-4.12.4
+asyncio: mode=strict, asyncio_default_fixture_loop_scope=None
+collecting ... collected 23 items
+
+backend/tests/test_api_and_ml.py::test_taxonomy_loads_and_covers_all_five_categories PASSED [  4%]
+backend/tests/test_api_and_ml.py::test_preprocess_pil_image_shape_and_dtype PASSED [  8%]
+backend/tests/test_api_and_ml.py::test_letterbox_preserves_aspect_ratio_without_cropping_extremities PASSED [ 13%]
+backend/tests/test_api_and_ml.py::test_threshold_and_margin_boundaries PASSED [ 17%]
+backend/tests/test_api_and_ml.py::test_low_resolution_and_dominant_background_warnings PASSED [ 21%]
+backend/tests/test_api_and_ml.py::test_csv_formula_injection_sanitization PASSED [ 26%]
+backend/tests/test_api_and_ml.py::test_filename_sanitization_blocks_path_traversal PASSED [ 30%]
+backend/tests/test_api_and_ml.py::test_validate_and_sanitize_image_strips_exif_and_validates PASSED [ 34%]
+backend/tests/test_api_and_ml.py::test_health_and_model_info_endpoints PASSED [ 39%]
+backend/tests/test_api_and_ml.py::test_predict_rejects_oversized_file_with_413 PASSED [ 43%]
+backend/tests/test_api_and_ml.py::test_predict_rejects_spoofed_magic_bytes_with_415 PASSED [ 47%]
+backend/tests/test_api_and_ml.py::test_predict_rejects_corrupt_image_bytes PASSED [ 52%]
+backend/tests/test_api_and_ml.py::test_predict_returns_503_when_model_not_loaded PASSED [ 56%]
+backend/tests/test_api_and_ml.py::test_uncertain_response_omits_category_bin_and_disposal_tips PASSED [ 60%]
+backend/tests/test_api_and_ml.py::test_predict_valid_image_and_db_persistence PASSED [ 65%]
+backend/tests/test_api_and_ml.py::test_field_eval_isolation_and_fixture_classification FAILED [ 69%]
+backend/tests/test_api_and_ml.py::test_batch_predict_handles_mixed_valid_and_invalid_files PASSED [ 73%]
+backend/tests/test_api_and_ml.py::test_history_analytics_export_and_delete_flow PASSED [ 78%]
+backend/tests/test_api_and_ml.py::test_near_uniform_and_high_entropy_abstention PASSED [ 82%]
+backend/tests/test_api_and_ml.py::test_class_order_consistency_across_artifacts PASSED [ 86%]
+backend/tests/test_api_and_ml.py::test_pile_warning_on_can_pile_and_low_single_item_false_positive_rate PASSED [ 91%]
+backend/tests/test_api_and_ml.py::test_grayscale_robustness_and_serving_offline_parity FAILED [ 95%]
+backend/tests/test_api_and_ml.py::test_feedback_export_staging_isolation PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________ test_field_eval_isolation_and_fixture_classification _____________
+
+client = <starlette.testclient.TestClient object at 0x7f82622709a0>
+
+    def test_field_eval_isolation_and_fixture_classification(client: TestClient):
+        """Verify field_eval dataset has >=30 images/class, zero train leakage, and classifies plastic_bottle_grass_01.jpg."""
+        field_dir = BASE_DIR / "ml" / "data" / "field_eval"
+        train_csv = BASE_DIR / "ml" / "data" / "splits" / "train.csv"
+        assert field_dir.exists()
+        assert train_csv.exists()
+    
+        train_hashes = set()
+        with train_csv.open("r", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                train_hashes.add(row["sha256"])
+    
+        for cls in ("plastic", "paper", "metal", "glass", "organic"):
+            cls_files = [
+                p for p in (field_dir / cls).iterdir() if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}
+            ]
+            assert len(cls_files) >= 30, f"Expected >=30 field_eval images for {cls}, found {len(cls_files)}"
+            for p in cls_files:
+                sha = hashlib.sha256(p.read_bytes()).hexdigest()
+>               assert sha not in train_hashes, f"Leakage detected: {p} is in train.csv!"
+E               AssertionError: Leakage detected: /app/applet/ml/data/field_eval/plastic/field_plastic_04_realwaste.jpg is in train.csv!
+E               assert 'cbcc306c3a220f9053a04b28834006b3e136f1aa583723549ebb7e5cb9110fd4' not in {'0018a0cf6d6fd2533e0416e94a9b0579ac8e8f83617d1ecc502859b1195242a8', '00242c2fa18219364fc61067753206c8395dacc8aeec80e849837016ead6bc69', '0027bb240ebf75827604aef81a1d64251ccbfb253caa036bbf8788fe765c497f', '002a9f82d76fde6ca3d0691fc220892d90b5c78aaaf35f580bc7f36f2e212877', '00468d218c35cc5883c6cfa0d6e9deafa9fcd94137fd352b14847e4b5cf933c4', '00498431d283035cc5bec2bf677d5780261eaa379e09324548d998af9e09b826', ...}
+
+backend/tests/test_api_and_ml.py:357: AssertionError
+_____________ test_grayscale_robustness_and_serving_offline_parity _____________
+
+    def test_grayscale_robustness_and_serving_offline_parity():
+        """Verify grayscale-converted images produce valid normalized probabilities and match offline preprocessing."""
+        pile_path = BASE_DIR / "tests" / "fixtures" / "field" / "metal_can_pile_01.jpg"
+        img_rgb = Image.open(pile_path).convert("RGB")
+        img_gray = img_rgb.convert("L").convert("RGB")
+    
+        # Verify offline letterbox + normalization matches preprocess_pil_image exactly
+        t1 = preprocess_pil_image(img_rgb, target_size=224)
+        boxed = letterbox_pil_image(img_rgb, target_size=224)
+        arr = np.asarray(boxed, dtype=np.float32) / 255.0
+        mean = np.array([0.485, 0.456, 0.406], dtype=np.float32)
+        std = np.array([0.229, 0.224, 0.225], dtype=np.float32)
+        t2 = np.expand_dims(((arr - mean) / std).transpose(2, 0, 1), axis=0).astype(np.float32)
+        assert np.allclose(t1, t2, atol=1e-6)
+    
+        out_gray = classifier_service.predict(img_gray)
+        assert abs(sum(out_gray.probabilities.values()) - 1.0) < 1e-3
+        # Grayscale conversion of metal_can_pile_01.jpg must still rank metal top-1
+>       assert out_gray.top_k[0]["category"] == "metal"
+E       AssertionError: assert 'organic' == 'metal'
+E         
+E         - metal
+E         + organic
+
+backend/tests/test_api_and_ml.py:605: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.10/site-packages/starlette/testclient.py:40
+  /app/applet/.venv/lib/python3.10/site-packages/starlette/testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform linux, python 3.10.12-final-0 ----------
+Name                               Stmts   Miss  Cover
+------------------------------------------------------
+backend/app/__init__.py                0      0   100%
+backend/app/api/routes.py            297     51    83%
+backend/app/config.py                 36      1    97%
+backend/app/core/__init__.py           0      0   100%
+backend/app/core/security.py         139     10    93%
+backend/app/core/taxonomy.py          47      7    85%
+backend/app/db/session.py             30      4    87%
+backend/app/main.py                   53      3    94%
+backend/app/ml/inference.py          180     12    93%
+backend/app/models/prediction.py      32      0   100%
+backend/app/schemas/api.py           121      0   100%
+------------------------------------------------------
+TOTAL                                935     88    91%
+
+=========================== short test summary info ============================
+FAILED backend/tests/test_api_and_ml.py::test_field_eval_isolation_and_fixture_classification
+FAILED backend/tests/test_api_and_ml.py::test_grayscale_robustness_and_serving_offline_parity
+=================== 2 failed, 21 passed, 1 warning in 1.52s ====================

@@ -1,0 +1,79 @@
+{
+  "model_name": "EcoSort ML Waste Classifier",
+  "model_version": "2.0.0+20261025.a38e0e76",
+  "architecture": "efficientnet_b0",
+  "is_smoke_test": false,
+  "exported_at": "2026-10-25T17:26:07.930008+00:00",
+  "weights_sha256": "a38e0e76349132f2ae6f126abc6d9b50d3b8c9d865d27c94d5a282f9d0ca3bcf",
+  "input_spec": {
+    "name": "input",
+    "shape": [
+      "batch_size",
+      3,
+      224,
+      224
+    ],
+    "dtype": "float32",
+    "color_space": "RGB",
+    "range": "[0.0, 1.0] normalized by ImageNet mean/std"
+  },
+  "input_size": 224,
+  "preprocessing": {
+    "method": "letterbox",
+    "target_size": 224,
+    "fill_rgb": [
+      124,
+      116,
+      104
+    ],
+    "tta": "2-view horizontal flip (0.65 orig + 0.35 hflip)",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "thresholds": {
+    "confidence_threshold": 0.5,
+    "high_confidence_threshold": 0.8,
+    "min_top1_top2_margin": 0.12
+  },
+  "class_names": [
+    "glass",
+    "metal",
+    "organic",
+    "paper",
+    "plastic"
+  ],
+  "temperature": 1.0,
+  "parity_check": {
+    "num_images_tested": 20,
+    "max_abs_softmax_diff": 4.887580871582031e-06,
+    "threshold": 0.0001,
+    "passed": true
+  },
+  "training_metadata": {
+    "best_epoch": 6,
+    "best_val_macro_f1": 0.8611,
+    "wall_clock_seconds": 219.81,
+    "git_commit": "unknown",
+    "manifest_sha256": "5ad8d01e2238283229d4d08c61f355fdd33f4e239470c01f2e9a4cea7eacd1dd"
+  },
+  "metrics_summary": {
+    "test_accuracy": 0.8865,
+    "test_macro_f1": 0.876,
+    "test_top_3_accuracy": 0.9789,
+    "test_ece": 0.0556,
+    "transparent_container_slice": {
+      "count": 255,
+      "accuracy": 0.8039,
+      "plastic_misclassified_as_glass": 10,
+      "glass_misclassified_as_plastic": 8
+    }
+  }
+}

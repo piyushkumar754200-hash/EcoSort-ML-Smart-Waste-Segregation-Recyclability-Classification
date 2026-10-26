@@ -1,0 +1,872 @@
+{
+  "recommended_confidence_threshold": 0.5,
+  "recommended_high_confidence_threshold": 0.8,
+  "recommended_min_margin": 0.12,
+  "recommended_max_entropy": 0.82,
+  "curve": [
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.35,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.4,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.9767,
+      "selective_accuracy": 0.9215,
+      "selective_risk": 0.0785
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.97,
+      "selective_accuracy": 0.921,
+      "selective_risk": 0.079
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.45,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9207,
+      "selective_risk": 0.0793
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.9733,
+      "selective_accuracy": 0.9247,
+      "selective_risk": 0.0753
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.9733,
+      "selective_accuracy": 0.9247,
+      "selective_risk": 0.0753
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.9733,
+      "selective_accuracy": 0.9247,
+      "selective_risk": 0.0753
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9241,
+      "selective_risk": 0.0759
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9241,
+      "selective_risk": 0.0759
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.9667,
+      "selective_accuracy": 0.9241,
+      "selective_risk": 0.0759
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.5,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.55,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.9633,
+      "selective_accuracy": 0.9239,
+      "selective_risk": 0.0761
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.6,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.94,
+      "selective_accuracy": 0.9397,
+      "selective_risk": 0.0603
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.65,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.9067,
+      "selective_accuracy": 0.9449,
+      "selective_risk": 0.0551
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.7,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.88,
+      "selective_accuracy": 0.9545,
+      "selective_risk": 0.0455
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.75,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.86,
+      "selective_accuracy": 0.9535,
+      "selective_risk": 0.0465
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.8,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.8267,
+      "selective_accuracy": 0.9677,
+      "selective_risk": 0.0323
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.85,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.7933,
+      "selective_accuracy": 0.9706,
+      "selective_risk": 0.0294
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.08,
+      "entropy_max": 0.78,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.08,
+      "entropy_max": 0.82,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.08,
+      "entropy_max": 0.86,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.12,
+      "entropy_max": 0.78,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.12,
+      "entropy_max": 0.82,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.12,
+      "entropy_max": 0.86,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.15,
+      "entropy_max": 0.78,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.15,
+      "entropy_max": 0.82,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    },
+    {
+      "confidence_threshold": 0.9,
+      "margin_min": 0.15,
+      "entropy_max": 0.86,
+      "coverage": 0.7233,
+      "selective_accuracy": 0.977,
+      "selective_risk": 0.023
+    }
+  ]
+}

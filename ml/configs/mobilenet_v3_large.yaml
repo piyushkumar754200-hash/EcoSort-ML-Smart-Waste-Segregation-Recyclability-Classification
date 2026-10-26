@@ -1,0 +1,41 @@
+experiment_name: "mobilenet_v3_large_waste5"
+backbone: "mobilenet_v3_large"
+pretrained: true
+num_classes: 5
+class_names:
+  - glass
+  - metal
+  - organic
+  - paper
+  - plastic
+
+seed: 42
+deterministic: true
+
+data:
+  manifest_dir: "ml/data/splits"
+  image_size: 224
+  batch_size: 24
+  num_workers: 0
+  max_samples_per_class_train: 180
+  max_samples_per_class_val: 95
+
+training:
+  warmup_epochs: 2
+  finetune_epochs: 4
+  learning_rate_head: 0.0035
+  learning_rate_finetune: 0.0009
+  weight_decay: 0.0001
+  label_smoothing: 0.015
+  early_stopping_patience: 3
+  unfreeze_last_n_blocks: 2
+
+calibration:
+  enable_temperature_scaling: true
+  initial_temperature: 1.0
+
+output:
+  checkpoint_dir: "artifacts/models"
+  checkpoint_name: "mobilenet_v3_large_best.pt"
+  logs_dir: "artifacts/logs"
+  reports_dir: "artifacts/reports"

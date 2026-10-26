@@ -1,0 +1,72 @@
+{
+  "selected_model": "efficientnet_b0_waste5",
+  "backbone": "efficientnet_b0",
+  "preprocessing": "resize_256_center_crop_224",
+  "test_samples": 747,
+  "accuracy": 0.8715,
+  "top_3_accuracy": 0.9853,
+  "macro_precision": 0.8691,
+  "macro_recall": 0.8682,
+  "macro_f1": 0.8676,
+  "weighted_precision": 0.8738,
+  "weighted_recall": 0.8715,
+  "weighted_f1": 0.8716,
+  "macro_roc_auc": 0.9794,
+  "macro_pr_auc": 0.9355,
+  "ece": 0.0369,
+  "temperature": 1.0,
+  "val_macro_f1": 0.8622,
+  "per_class": [
+    {
+      "category": "glass",
+      "precision": 0.8582,
+      "recall": 0.8519,
+      "f1": 0.855,
+      "support": 135
+    },
+    {
+      "category": "metal",
+      "precision": 0.8507,
+      "recall": 0.8444,
+      "f1": 0.8476,
+      "support": 135
+    },
+    {
+      "category": "organic",
+      "precision": 0.916,
+      "recall": 0.938,
+      "f1": 0.9268,
+      "support": 129
+    },
+    {
+      "category": "paper",
+      "precision": 0.8927,
+      "recall": 0.9119,
+      "f1": 0.9022,
+      "support": 227
+    },
+    {
+      "category": "plastic",
+      "precision": 0.8279,
+      "recall": 0.7934,
+      "f1": 0.8103,
+      "support": 121
+    }
+  ],
+  "model_comparison": [
+    {
+      "checkpoint": "efficientnet_b0_best.pt",
+      "backbone": "efficientnet_b0",
+      "val_macro_f1": 0.8622,
+      "temperature": 1.0,
+      "wall_clock_seconds": 144.8
+    },
+    {
+      "checkpoint": "mobilenet_v3_large_best.pt",
+      "backbone": "mobilenet_v3_large",
+      "val_macro_f1": 0.8602,
+      "temperature": 1.0,
+      "wall_clock_seconds": 78.4
+    }
+  ]
+}

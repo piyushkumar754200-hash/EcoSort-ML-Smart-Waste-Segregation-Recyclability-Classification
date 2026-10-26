@@ -1,0 +1,225 @@
+{
+  "model_version": "3.0.0+20261025.988a7aab",
+  "total_samples": 213,
+  "accuracy": 0.8592,
+  "non_abstained_accuracy": 0.8861,
+  "confidently_wrong_rate": 0.108,
+  "macro_precision": 0.8595,
+  "macro_recall": 0.8607,
+  "macro_f1": 0.8593,
+  "uncertain_rate": 0.0516,
+  "mean_confidence": 0.9041,
+  "slices": {
+    "pile_bulk": {
+      "count": 41,
+      "accuracy": 0.9024,
+      "non_abstained_accuracy": 0.9459,
+      "abstention_rate": 0.0976,
+      "confidently_wrong_rate": 0.0488
+    },
+    "single_item": {
+      "count": 172,
+      "accuracy": 0.8488,
+      "non_abstained_accuracy": 0.8727,
+      "abstention_rate": 0.0407,
+      "confidently_wrong_rate": 0.1221
+    },
+    "low_res": {
+      "count": 47,
+      "accuracy": 0.8936,
+      "non_abstained_accuracy": 0.9302,
+      "abstention_rate": 0.0851,
+      "confidently_wrong_rate": 0.0638
+    },
+    "metal_pile_crushed": {
+      "count": 9,
+      "accuracy": 1.0,
+      "non_abstained_accuracy": 1.0,
+      "abstention_rate": 0.1111,
+      "confidently_wrong_rate": 0.0,
+      "classified_as_metal_medium_or_high_rate": 0.8889
+    }
+  },
+  "per_class": [
+    {
+      "category": "glass",
+      "accuracy": 0.8333,
+      "precision": 0.875,
+      "recall": 0.8333,
+      "f1": 0.8537,
+      "support": 42
+    },
+    {
+      "category": "metal",
+      "accuracy": 0.8372,
+      "precision": 0.8571,
+      "recall": 0.8372,
+      "f1": 0.8471,
+      "support": 43
+    },
+    {
+      "category": "organic",
+      "accuracy": 0.9762,
+      "precision": 0.9762,
+      "recall": 0.9762,
+      "f1": 0.9762,
+      "support": 42
+    },
+    {
+      "category": "paper",
+      "accuracy": 0.9524,
+      "precision": 0.8511,
+      "recall": 0.9524,
+      "f1": 0.8989,
+      "support": 42
+    },
+    {
+      "category": "plastic",
+      "accuracy": 0.7045,
+      "precision": 0.7381,
+      "recall": 0.7045,
+      "f1": 0.7209,
+      "support": 44
+    }
+  ],
+  "confusion_matrix": [
+    [
+      35,
+      1,
+      0,
+      2,
+      4
+    ],
+    [
+      1,
+      36,
+      1,
+      0,
+      5
+    ],
+    [
+      0,
+      0,
+      41,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      40,
+      1
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      31
+    ]
+  ],
+  "class_names": [
+    "glass",
+    "metal",
+    "organic",
+    "paper",
+    "plastic"
+  ],
+  "plastic_bottle_grass_01": {
+    "path": "ml/data/field_eval/plastic/plastic_bottle_grass_01.jpg",
+    "filename": "plastic_bottle_grass_01.jpg",
+    "true_category": "plastic",
+    "predicted_top1": "plastic",
+    "returned_category": "plastic",
+    "status": "ok",
+    "confidence": 0.762,
+    "confidence_level": "MEDIUM",
+    "entropy": 0.5122,
+    "is_pile_slice": false,
+    "is_low_res": true,
+    "width": 194,
+    "height": 259,
+    "top_k": [
+      {
+        "label": "plastic",
+        "category": "plastic",
+        "probability": 0.762
+      },
+      {
+        "label": "metal",
+        "category": "metal",
+        "probability": 0.1207
+      },
+      {
+        "label": "organic",
+        "category": "organic",
+        "probability": 0.0627
+      }
+    ]
+  },
+  "plastic_bottle_table_02": {
+    "path": "ml/data/field_eval/plastic/plastic_bottle_table_02.jpg",
+    "filename": "plastic_bottle_table_02.jpg",
+    "true_category": "plastic",
+    "predicted_top1": "plastic",
+    "returned_category": "plastic",
+    "status": "ok",
+    "confidence": 0.7678,
+    "confidence_level": "MEDIUM",
+    "entropy": 0.364,
+    "is_pile_slice": false,
+    "is_low_res": true,
+    "width": 144,
+    "height": 256,
+    "top_k": [
+      {
+        "label": "plastic",
+        "category": "plastic",
+        "probability": 0.7678
+      },
+      {
+        "label": "glass",
+        "category": "glass",
+        "probability": 0.2233
+      },
+      {
+        "label": "organic",
+        "category": "organic",
+        "probability": 0.0066
+      }
+    ]
+  },
+  "metal_can_pile_01": {
+    "path": "ml/data/field_eval/metal/metal_can_pile_01.jpg",
+    "filename": "metal_can_pile_01.jpg",
+    "true_category": "metal",
+    "predicted_top1": "metal",
+    "returned_category": null,
+    "status": "uncertain",
+    "confidence": 0.4257,
+    "confidence_level": "LOW",
+    "entropy": 0.8517,
+    "is_pile_slice": true,
+    "is_low_res": true,
+    "width": 256,
+    "height": 193,
+    "top_k": [
+      {
+        "label": "metal",
+        "category": "metal",
+        "probability": 0.4257
+      },
+      {
+        "label": "organic",
+        "category": "organic",
+        "probability": 0.2511
+      },
+      {
+        "label": "plastic",
+        "category": "plastic",
+        "probability": 0.1858
+      }
+    ]
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "fixture_path": "tests/fixtures/field/metal_can_pile_01.jpg",
+  "image_size": [
+    256,
+    193
+  ],
+  "can_pile_visual_features": {
+    "colourfulness": 54.47,
+    "edge_density": 0.4546,
+    "min_quadrant_edge": 0.4085,
+    "border_uniformity": 0.0593
+  },
+  "a1_reproduction": {
+    "pytorch_probs": {
+      "glass": 0.0514,
+      "metal": 0.1863,
+      "organic": 0.2527,
+      "paper": 0.0607,
+      "plastic": 0.4489
+    },
+    "onnx_probs": {
+      "glass": 0.0514,
+      "metal": 0.1863,
+      "organic": 0.2527,
+      "paper": 0.0607,
+      "plastic": 0.4489
+    },
+    "cli_status": "uncertain",
+    "cli_top_k": [
+      {
+        "label": "plastic",
+        "category": "plastic",
+        "probability": 0.4489
+      },
+      {
+        "label": "organic",
+        "category": "organic",
+        "probability": 0.2527
+      },
+      {
+        "label": "metal",
+        "category": "metal",
+        "probability": 0.1863
+      }
+    ],
+    "api_status": "uncertain",
+    "api_category": null,
+    "api_quality_warnings": [
+      "Image is small (256x193). Larger photos (>= 224 px on the shorter side) usually give better results.",
+      "Dominant background color/texture detected around the edges. Placing the item on a plain, neutral surface improves accuracy on transparent items.",
+      "Top-1 confidence (44.9%) is below the minimum certainty threshold (50%). Top candidates: plastic (44.9%), organic (25.3%), metal (18.6%)"
+    ],
+    "all_four_agree": true
+  },
+  "a2_raw_vs_calibrated": {
+    "raw_logits_orig": {
+      "glass": -1.8944,
+      "metal": -0.5034,
+      "organic": -0.2004,
+      "paper": -1.7635,
+      "plastic": 0.5115
+    },
+    "raw_logits_hflip": {
+      "glass": -1.6151,
+      "metal": -0.5221,
+      "organic": -0.2134,
+      "paper": -1.3866,
+      "plastic": 0.1061
+    },
+    "raw_logits_tta": {
+      "glass": -1.7966,
+      "metal": -0.5099,
+      "organic": -0.205,
+      "paper": -1.6316,
+      "plastic": 0.3696
+    },
+    "softmax_before_temp": {
+      "glass": 0.0514,
+      "metal": 0.1863,
+      "organic": 0.2527,
+      "paper": 0.0607,
+      "plastic": 0.4489
+    },
+    "temperature": 1.0,
+    "softmax_after_temp": {
+      "glass": 0.0514,
+      "metal": 0.1863,
+      "organic": 0.2527,
+      "paper": 0.0607,
+      "plastic": 0.4489
+    },
+    "shannon_entropy_nats": 1.3429,
+    "max_possible_entropy_nats": 1.6094,
+    "normalized_entropy": 0.8344
+  },
+  "a3_training_data_audit": {
+    "per_class_train_counts": {
+      "metal": 577,
+      "paper": 1200,
+      "organic": 569,
+      "glass": 585,
+      "plastic": 605
+    },
+    "per_source_train_counts": {
+      "realwaste:glass": 278,
+      "realwaste:metal": 299,
+      "realwaste:organic": 569,
+      "realwaste:paper": 614,
+      "realwaste:plastic": 299,
+      "trashnet:glass": 307,
+      "trashnet:metal": 278,
+      "trashnet:paper": 586,
+      "trashnet:plastic": 306
+    },
+    "metal_subtypes": {
+      "single_clean_can_plain_bg": 297,
+      "crushed_or_deformed_can": 0,
+      "multi_item_or_pile_clutter": 4,
+      "foil_tins_lids_other": 276
+    },
+    "mean_metal_colourfulness": 20.52,
+    "mean_organic_colourfulness": 19.19,
+    "mean_metal_edge_density": 0.0716,
+    "mean_organic_edge_density": 0.0912,
+    "can_pile_colourfulness": 54.47,
+    "can_pile_edge_density": 0.4546
+  },
+  "a4_colour_ablation_validation": {
+    "val_samples": 758,
+    "val_rgb_accuracy": 0.8588,
+    "val_grayscale_accuracy": 0.8087,
+    "overall_accuracy_drop": 0.0501,
+    "per_class_ablation": [
+      {
+        "category": "glass",
+        "support": 125,
+        "rgb_precision": 0.856,
+        "rgb_recall": 0.856,
+        "rgb_f1": 0.856,
+        "grayscale_recall": 0.832,
+        "grayscale_f1": 0.779,
+        "recall_drop_on_grayscale": 0.024
+      },
+      {
+        "category": "metal",
+        "support": 124,
+        "rgb_precision": 0.6875,
+        "rgb_recall": 0.7984,
+        "rgb_f1": 0.7388,
+        "grayscale_recall": 0.8145,
+        "grayscale_f1": 0.7189,
+        "recall_drop_on_grayscale": -0.0161
+      },
+      {
+        "category": "organic",
+        "support": 122,
+        "rgb_precision": 0.9213,
+        "rgb_recall": 0.959,
+        "rgb_f1": 0.9398,
+        "grayscale_recall": 0.9672,
+        "grayscale_f1": 0.9365,
+        "recall_drop_on_grayscale": -0.0082
+      },
+      {
+        "category": "paper",
+        "support": 257,
+        "rgb_precision": 0.9603,
+        "rgb_recall": 0.9416,
+        "rgb_f1": 0.9509,
+        "grayscale_recall": 0.8677,
+        "grayscale_f1": 0.901,
+        "recall_drop_on_grayscale": 0.0739
+      },
+      {
+        "category": "plastic",
+        "support": 130,
+        "rgb_precision": 0.7818,
+        "rgb_recall": 0.6615,
+        "rgb_f1": 0.7167,
+        "grayscale_recall": 0.5154,
+        "grayscale_f1": 0.6063,
+        "recall_drop_on_grayscale": 0.1462
+      }
+    ]
+  },
+  "a5_validation_slices": {
+    "confusion_matrix": [
+      [
+        107,
+        15,
+        0,
+        0,
+        3
+      ],
+      [
+        5,
+        99,
+        2,
+        3,
+        15
+      ],
+      [
+        1,
+        0,
+        117,
+        0,
+        4
+      ],
+      [
+        2,
+        6,
+        5,
+        242,
+        2
+      ],
+      [
+        10,
+        24,
+        3,
+        7,
+        86
+      ]
+    ],
+    "class_names": [
+      "glass",
+      "metal",
+      "organic",
+      "paper",
+      "plastic"
+    ],
+    "confusion_rates": {
+      "metal_to_plastic_rate": 0.121,
+      "metal_to_organic_rate": 0.0161,
+      "metal_to_glass_rate": 0.0403,
+      "plastic_to_metal_rate": 0.1846,
+      "plastic_to_glass_rate": 0.0769
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "experiment_name": "mobilenet_v3_large_waste5",
+  "backbone": "mobilenet_v3_large",
+  "class_names": [
+    "glass",
+    "metal",
+    "organic",
+    "paper",
+    "plastic"
+  ],
+  "image_size": 224,
+  "best_epoch": 5,
+  "best_val_macro_f1": 0.8925,
+  "temperature": 1.0,
+  "val_ece_before": 0.0217,
+  "val_ece_after": 0.0217,
+  "wall_clock_seconds": 72.68,
+  "device": "cpu",
+  "seed": 42,
+  "git_commit": "unknown",
+  "manifest_sha256": "48f418c015a290475f76a42d0acf46bbad97d10b3d1d7a22497780666554a6f6",
+  "package_versions": {
+    "torch": "2.5.1+cpu",
+    "torchvision": "0.20.1+cpu",
+    "numpy": "2.2.1"
+  },
+  "is_smoke_test": false,
+  "config_snapshot": {
+    "experiment_name": "mobilenet_v3_large_waste5",
+    "backbone": "mobilenet_v3_large",
+    "pretrained": true,
+    "num_classes": 5,
+    "class_names": [
+      "glass",
+      "metal",
+      "organic",
+      "paper",
+      "plastic"
+    ],
+    "seed": 42,
+    "deterministic": true,
+    "data": {
+      "manifest_dir": "ml/data/splits",
+      "image_size": 224,
+      "batch_size": 24,
+      "num_workers": 0,
+      "max_samples_per_class_train": 180,
+      "max_samples_per_class_val": 95
+    },
+    "training": {
+      "warmup_epochs": 2,
+      "finetune_epochs": 4,
+      "learning_rate_head": 0.0035,
+      "learning_rate_finetune": 0.0009,
+      "weight_decay": 0.0001,
+      "label_smoothing": 0.015,
+      "early_stopping_patience": 3,
+      "unfreeze_last_n_blocks": 2
+    },
+    "calibration": {
+      "enable_temperature_scaling": true,
+      "initial_temperature": 1.0
+    },
+    "output": {
+      "checkpoint_dir": "artifacts/models",
+      "checkpoint_name": "mobilenet_v3_large_best.pt",
+      "logs_dir": "artifacts/logs",
+      "reports_dir": "artifacts/reports"
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "stage": "warmup",
+      "train_loss": 0.7682,
+      "train_acc": 0.7262,
+      "train_macro_f1": 0.729,
+      "val_loss": 0.4743,
+      "val_acc": 0.8442,
+      "val_macro_f1": 0.843,
+      "epoch_seconds": 1.3
+    },
+    {
+      "epoch": 2,
+      "stage": "warmup",
+      "train_loss": 0.2984,
+      "train_acc": 0.9216,
+      "train_macro_f1": 0.9229,
+      "val_loss": 0.405,
+      "val_acc": 0.88,
+      "val_macro_f1": 0.8793,
+      "epoch_seconds": 1.32
+    },
+    {
+      "epoch": 3,
+      "stage": "finetune",
+      "train_loss": 0.3571,
+      "train_acc": 0.9013,
+      "train_macro_f1": 0.9031,
+      "val_loss": 0.4243,
+      "val_acc": 0.8863,
+      "val_macro_f1": 0.8852,
+      "epoch_seconds": 4.14
+    },
+    {
+      "epoch": 4,
+      "stage": "finetune",
+      "train_loss": 0.1784,
+      "train_acc": 0.9757,
+      "train_macro_f1": 0.9764,
+      "val_loss": 0.3699,
+      "val_acc": 0.8863,
+      "val_macro_f1": 0.8869,
+      "epoch_seconds": 5.08
+    },
+    {
+      "epoch": 5,
+      "stage": "finetune",
+      "train_loss": 0.1165,
+      "train_acc": 0.9966,
+      "train_macro_f1": 0.9966,
+      "val_loss": 0.3785,
+      "val_acc": 0.8926,
+      "val_macro_f1": 0.8925,
+      "epoch_seconds": 4.07
+    },
+    {
+      "epoch": 6,
+      "stage": "finetune",
+      "train_loss": 0.1,
+      "train_acc": 1.0,
+      "train_macro_f1": 1.0,
+      "val_loss": 0.3676,
+      "val_acc": 0.8926,
+      "val_macro_f1": 0.8922,
+      "epoch_seconds": 4.05
+    }
+  ]
+}

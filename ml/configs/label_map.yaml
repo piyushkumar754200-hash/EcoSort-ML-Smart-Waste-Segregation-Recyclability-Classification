@@ -1,0 +1,45 @@
+target_categories:
+  - glass
+  - metal
+  - organic
+  - paper
+  - plastic
+
+sources:
+  trashnet:
+    description: "TrashNet (Gary Thung & Mindy Yang, Stanford) - 2,527 images across 6 classes"
+    license: "MIT License"
+    url: "https://github.com/garythung/trashnet/raw/master/data/dataset-resized.zip"
+    mapping:
+      glass: "glass"
+      metal: "metal"
+      paper: "paper"
+      cardboard: "paper"
+      plastic: "plastic"
+      trash: null
+
+  realwaste_and_organics:
+    description: "RealWaste (UCI / University of Wollongong, CC BY 4.0)"
+    license: "CC BY 4.0"
+    url: "https://archive.ics.uci.edu/static/public/908/realwaste.zip"
+    mapping:
+      Glass: "glass"
+      Metal: "metal"
+      Food Organics: "organic"
+      Vegetation: "organic"
+      Paper: "paper"
+      Cardboard: "paper"
+      Plastic: "plastic"
+      Miscellaneous Trash: null
+      Textile Trash: null
+
+  clutter_piles:
+    description: "Split-Isolated Multi-Item Pile & Crushed-Container Scenes (MIT / CC BY 4.0 derived)"
+    license: "MIT & CC BY 4.0"
+    url: "local://ml/data/raw/clutter_piles"
+    mapping:
+      glass: "glass"
+      metal: "metal"
+      organic: "organic"
+      paper: "paper"
+      plastic: "plastic"

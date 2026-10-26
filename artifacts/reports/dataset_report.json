@@ -1,0 +1,117 @@
+{
+  "total_scanned_files": 5977,
+  "excluded_unmapped_files": 0,
+  "corrupt_or_unreadable_count": 0,
+  "perceptual_duplicates_removed": 8,
+  "usable_deduplicated_total": 5969,
+  "per_source_raw_counts": {
+    "clutter_piles": {
+      "glass": 160,
+      "metal": 202,
+      "organic": 173,
+      "paper": 60,
+      "plastic": 152
+    },
+    "realwaste": {
+      "Cardboard": 450,
+      "Food Organics": 411,
+      "Glass": 420,
+      "Metal": 450,
+      "Paper": 450,
+      "Plastic": 450,
+      "Vegetation": 436
+    },
+    "trashnet": {
+      "cardboard": 403,
+      "glass": 450,
+      "metal": 410,
+      "paper": 450,
+      "plastic": 450
+    }
+  },
+  "image_size_distribution": {
+    "min_width": 256,
+    "median_width": 256,
+    "max_width": 256,
+    "min_height": 192,
+    "median_height": 256,
+    "max_height": 256
+  },
+  "five_category_coverage": {
+    "glass": {
+      "usable_clean_count": 1030,
+      "sources": {
+        "clutter_piles": 160,
+        "realwaste": 420,
+        "trashnet": 450
+      },
+      "num_distinct_sources": 3,
+      "cluttered_or_natural_count": 720,
+      "cluttered_or_natural_share": 0.699,
+      "meets_300_minimum": true,
+      "meets_800_preferred": true,
+      "meets_1000_target": true,
+      "contact_sheet": "artifacts/reports/contact_sheet_glass.jpg"
+    },
+    "metal": {
+      "usable_clean_count": 1060,
+      "sources": {
+        "clutter_piles": 202,
+        "realwaste": 450,
+        "trashnet": 408
+      },
+      "num_distinct_sources": 3,
+      "cluttered_or_natural_count": 682,
+      "cluttered_or_natural_share": 0.6434,
+      "meets_300_minimum": true,
+      "meets_800_preferred": true,
+      "meets_1000_target": true,
+      "contact_sheet": "artifacts/reports/contact_sheet_metal.jpg"
+    },
+    "organic": {
+      "usable_clean_count": 1020,
+      "sources": {
+        "clutter_piles": 173,
+        "realwaste": 847
+      },
+      "num_distinct_sources": 2,
+      "cluttered_or_natural_count": 696,
+      "cluttered_or_natural_share": 0.6824,
+      "meets_300_minimum": true,
+      "meets_800_preferred": true,
+      "meets_1000_target": true,
+      "contact_sheet": "artifacts/reports/contact_sheet_organic.jpg"
+    },
+    "paper": {
+      "usable_clean_count": 1809,
+      "sources": {
+        "clutter_piles": 60,
+        "realwaste": 900,
+        "trashnet": 849
+      },
+      "num_distinct_sources": 3,
+      "cluttered_or_natural_count": 1453,
+      "cluttered_or_natural_share": 0.8032,
+      "meets_300_minimum": true,
+      "meets_800_preferred": true,
+      "meets_1000_target": true,
+      "contact_sheet": "artifacts/reports/contact_sheet_paper.jpg"
+    },
+    "plastic": {
+      "usable_clean_count": 1050,
+      "sources": {
+        "clutter_piles": 152,
+        "realwaste": 450,
+        "trashnet": 448
+      },
+      "num_distinct_sources": 3,
+      "cluttered_or_natural_count": 718,
+      "cluttered_or_natural_share": 0.6838,
+      "meets_300_minimum": true,
+      "meets_800_preferred": true,
+      "meets_1000_target": true,
+      "contact_sheet": "artifacts/reports/contact_sheet_plastic.jpg"
+    }
+  },
+  "overall_coverage_verdict": "PASS"
+}

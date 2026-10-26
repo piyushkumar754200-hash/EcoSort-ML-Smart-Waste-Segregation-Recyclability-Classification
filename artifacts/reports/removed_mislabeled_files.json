@@ -1,0 +1,53 @@
+{
+  "excluded_ambiguous_raw_classes": [
+    "trashnet:trash",
+    "realwaste:Miscellaneous Trash",
+    "realwaste:Textile Trash"
+  ],
+  "excluded_unmapped_count": 0,
+  "corrupt_removed": [],
+  "degenerate_or_mislabeled_removed": [],
+  "perceptual_duplicates_removed_count": 8,
+  "sample_duplicates_removed": [
+    {
+      "duplicate": "ml/data/raw/trashnet/metal/metal76.jpg",
+      "original": "ml/data/raw/trashnet/metal/metal394.jpg",
+      "dhash": "2687993838383838"
+    },
+    {
+      "duplicate": "ml/data/raw/trashnet/metal/metal91.jpg",
+      "original": "ml/data/raw/trashnet/glass/glass115.jpg",
+      "dhash": "c8c8cccccccc8cd4"
+    },
+    {
+      "duplicate": "ml/data/raw/trashnet/paper/paper110.jpg",
+      "original": "ml/data/raw/trashnet/cardboard/cardboard83.jpg",
+      "dhash": "0000000000000000"
+    },
+    {
+      "duplicate": "ml/data/raw/trashnet/paper/paper385.jpg",
+      "original": "ml/data/raw/trashnet/cardboard/cardboard83.jpg",
+      "dhash": "0000000000000000"
+    },
+    {
+      "duplicate": "ml/data/raw/trashnet/paper/paper451.jpg",
+      "original": "ml/data/raw/trashnet/paper/paper345.jpg",
+      "dhash": "180e2b0e0c4d4723"
+    },
+    {
+      "duplicate": "ml/data/raw/trashnet/paper/paper50.jpg",
+      "original": "ml/data/raw/trashnet/cardboard/cardboard83.jpg",
+      "dhash": "0000000000000000"
+    },
+    {
+      "duplicate": "ml/data/raw/trashnet/plastic/plastic152.jpg",
+      "original": "ml/data/raw/trashnet/glass/glass176.jpg",
+      "dhash": "c60e4664646cb87c"
+    },
+    {
+      "duplicate": "ml/data/raw/trashnet/plastic/plastic332.jpg",
+      "original": "ml/data/raw/trashnet/glass/glass389.jpg",
+      "dhash": "0203050307169c9c"
+    }
+  ]
+}

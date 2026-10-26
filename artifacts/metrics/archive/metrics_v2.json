@@ -1,0 +1,375 @@
+{
+  "selected_model": "efficientnet_b0_waste5",
+  "backbone": "efficientnet_b0",
+  "preprocessing": "letterbox_224_with_2view_hflip_tta",
+  "test_samples": 758,
+  "accuracy": 0.8865,
+  "top_3_accuracy": 0.9789,
+  "macro_precision": 0.8763,
+  "macro_recall": 0.8795,
+  "macro_f1": 0.876,
+  "weighted_precision": 0.8896,
+  "weighted_recall": 0.8865,
+  "weighted_f1": 0.8865,
+  "macro_roc_auc": 0.9772,
+  "macro_pr_auc": 0.9307,
+  "ece": 0.0556,
+  "temperature": 1.0,
+  "val_macro_f1": 0.8611,
+  "risk_coverage_thresholds": {
+    "confidence_threshold": 0.5,
+    "high_confidence_threshold": 0.8,
+    "min_top1_top2_margin": 0.12
+  },
+  "transparent_container_slice": {
+    "count": 255,
+    "accuracy": 0.8039,
+    "plastic_misclassified_as_glass": 10,
+    "glass_misclassified_as_plastic": 8
+  },
+  "per_class": [
+    {
+      "category": "glass",
+      "precision": 0.8583,
+      "recall": 0.8651,
+      "f1": 0.8617,
+      "support": 126
+    },
+    {
+      "category": "metal",
+      "precision": 0.7535,
+      "recall": 0.8699,
+      "f1": 0.8075,
+      "support": 123
+    },
+    {
+      "category": "organic",
+      "precision": 0.9528,
+      "recall": 0.9918,
+      "f1": 0.9719,
+      "support": 122
+    },
+    {
+      "category": "paper",
+      "precision": 0.9522,
+      "recall": 0.9264,
+      "f1": 0.9391,
+      "support": 258
+    },
+    {
+      "category": "plastic",
+      "precision": 0.8649,
+      "recall": 0.7442,
+      "f1": 0.8,
+      "support": 129
+    }
+  ],
+  "confusion_matrix": [
+    [
+      109,
+      7,
+      1,
+      1,
+      8
+    ],
+    [
+      5,
+      107,
+      2,
+      4,
+      5
+    ],
+    [
+      0,
+      0,
+      121,
+      0,
+      1
+    ],
+    [
+      3,
+      13,
+      2,
+      239,
+      1
+    ],
+    [
+      10,
+      15,
+      1,
+      7,
+      96
+    ]
+  ],
+  "class_names": [
+    "glass",
+    "metal",
+    "organic",
+    "paper",
+    "plastic"
+  ],
+  "reliability_bins": [
+    {
+      "bin_low": 0.0,
+      "bin_high": 0.1,
+      "count": 0,
+      "avg_confidence": 0.05,
+      "avg_accuracy": 0.0
+    },
+    {
+      "bin_low": 0.1,
+      "bin_high": 0.2,
+      "count": 0,
+      "avg_confidence": 0.15,
+      "avg_accuracy": 0.0
+    },
+    {
+      "bin_low": 0.2,
+      "bin_high": 0.3,
+      "count": 2,
+      "avg_confidence": 0.2775,
+      "avg_accuracy": 0.0
+    },
+    {
+      "bin_low": 0.3,
+      "bin_high": 0.4,
+      "count": 16,
+      "avg_confidence": 0.3546,
+      "avg_accuracy": 0.4375
+    },
+    {
+      "bin_low": 0.4,
+      "bin_high": 0.5,
+      "count": 25,
+      "avg_confidence": 0.4574,
+      "avg_accuracy": 0.48
+    },
+    {
+      "bin_low": 0.5,
+      "bin_high": 0.6,
+      "count": 58,
+      "avg_confidence": 0.5452,
+      "avg_accuracy": 0.6379
+    },
+    {
+      "bin_low": 0.6,
+      "bin_high": 0.7,
+      "count": 77,
+      "avg_confidence": 0.6537,
+      "avg_accuracy": 0.8052
+    },
+    {
+      "bin_low": 0.7,
+      "bin_high": 0.8,
+      "count": 74,
+      "avg_confidence": 0.7545,
+      "avg_accuracy": 0.8514
+    },
+    {
+      "bin_low": 0.8,
+      "bin_high": 0.9,
+      "count": 114,
+      "avg_confidence": 0.8588,
+      "avg_accuracy": 0.9474
+    },
+    {
+      "bin_low": 0.9,
+      "bin_high": 1.0,
+      "count": 392,
+      "avg_confidence": 0.9633,
+      "avg_accuracy": 0.977
+    }
+  ],
+  "per_source": {
+    "realwaste": {
+      "count": 442,
+      "accuracy": 0.8801,
+      "macro_f1": 0.851
+    },
+    "trashnet": {
+      "count": 316,
+      "accuracy": 0.8956,
+      "macro_f1": 0.7094
+    }
+  },
+  "model_comparison": [
+    {
+      "checkpoint": "efficientnet_b0_best.pt",
+      "backbone": "efficientnet_b0",
+      "val_macro_f1": 0.8367,
+      "val_transparent_slice_acc": 0.7167,
+      "temperature": 1.0,
+      "wall_clock_seconds": 219.81
+    },
+    {
+      "checkpoint": "mobilenet_v3_large_best.pt",
+      "backbone": "mobilenet_v3_large",
+      "val_macro_f1": 0.8811,
+      "val_transparent_slice_acc": 0.7833,
+      "temperature": 1.0,
+      "wall_clock_seconds": 133.39
+    }
+  ],
+  "sample_misclassifications": [
+    {
+      "path": "ml/data/raw/realwaste/Metal/Metal_100.jpg",
+      "source": "realwaste",
+      "raw_label": "Metal",
+      "true_label": "metal",
+      "pred_label": "plastic",
+      "confidence": 0.9853
+    },
+    {
+      "path": "ml/data/raw/trashnet/glass/glass186.jpg",
+      "source": "trashnet",
+      "raw_label": "glass",
+      "true_label": "glass",
+      "pred_label": "metal",
+      "confidence": 0.9825
+    },
+    {
+      "path": "ml/data/raw/realwaste/Paper/Paper_17.jpg",
+      "source": "realwaste",
+      "raw_label": "Paper",
+      "true_label": "paper",
+      "pred_label": "metal",
+      "confidence": 0.9552
+    },
+    {
+      "path": "ml/data/raw/realwaste/Cardboard/Cardboard_134.jpg",
+      "source": "realwaste",
+      "raw_label": "Cardboard",
+      "true_label": "paper",
+      "pred_label": "metal",
+      "confidence": 0.9369
+    },
+    {
+      "path": "ml/data/raw/trashnet/plastic/plastic481.jpg",
+      "source": "trashnet",
+      "raw_label": "plastic",
+      "true_label": "plastic",
+      "pred_label": "paper",
+      "confidence": 0.9332
+    },
+    {
+      "path": "ml/data/raw/trashnet/metal/metal152.jpg",
+      "source": "trashnet",
+      "raw_label": "metal",
+      "true_label": "metal",
+      "pred_label": "glass",
+      "confidence": 0.9229
+    },
+    {
+      "path": "ml/data/raw/trashnet/glass/glass442.jpg",
+      "source": "trashnet",
+      "raw_label": "glass",
+      "true_label": "glass",
+      "pred_label": "metal",
+      "confidence": 0.9226
+    },
+    {
+      "path": "ml/data/raw/trashnet/plastic/plastic451.jpg",
+      "source": "trashnet",
+      "raw_label": "plastic",
+      "true_label": "plastic",
+      "pred_label": "glass",
+      "confidence": 0.9049
+    },
+    {
+      "path": "ml/data/raw/realwaste/Plastic/Plastic_32.jpg",
+      "source": "realwaste",
+      "raw_label": "Plastic",
+      "true_label": "plastic",
+      "pred_label": "metal",
+      "confidence": 0.9025
+    },
+    {
+      "path": "ml/data/raw/trashnet/glass/glass263.jpg",
+      "source": "trashnet",
+      "raw_label": "glass",
+      "true_label": "glass",
+      "pred_label": "plastic",
+      "confidence": 0.8872
+    },
+    {
+      "path": "ml/data/raw/trashnet/metal/metal272.jpg",
+      "source": "trashnet",
+      "raw_label": "metal",
+      "true_label": "metal",
+      "pred_label": "glass",
+      "confidence": 0.8717
+    },
+    {
+      "path": "ml/data/raw/trashnet/paper/paper209.jpg",
+      "source": "trashnet",
+      "raw_label": "paper",
+      "true_label": "paper",
+      "pred_label": "metal",
+      "confidence": 0.854
+    },
+    {
+      "path": "ml/data/raw/realwaste/Plastic/Plastic_339.jpg",
+      "source": "realwaste",
+      "raw_label": "Plastic",
+      "true_label": "plastic",
+      "pred_label": "glass",
+      "confidence": 0.8269
+    },
+    {
+      "path": "ml/data/raw/realwaste/Glass/Glass_354.jpg",
+      "source": "realwaste",
+      "raw_label": "Glass",
+      "true_label": "glass",
+      "pred_label": "metal",
+      "confidence": 0.8122
+    },
+    {
+      "path": "ml/data/raw/trashnet/plastic/plastic3.jpg",
+      "source": "trashnet",
+      "raw_label": "plastic",
+      "true_label": "plastic",
+      "pred_label": "paper",
+      "confidence": 0.8092
+    },
+    {
+      "path": "ml/data/raw/trashnet/plastic/plastic160.jpg",
+      "source": "trashnet",
+      "raw_label": "plastic",
+      "true_label": "plastic",
+      "pred_label": "glass",
+      "confidence": 0.7788
+    },
+    {
+      "path": "ml/data/raw/realwaste/Cardboard/Cardboard_339.jpg",
+      "source": "realwaste",
+      "raw_label": "Cardboard",
+      "true_label": "paper",
+      "pred_label": "metal",
+      "confidence": 0.7754
+    },
+    {
+      "path": "ml/data/raw/trashnet/glass/glass141.jpg",
+      "source": "trashnet",
+      "raw_label": "glass",
+      "true_label": "glass",
+      "pred_label": "metal",
+      "confidence": 0.7447
+    },
+    {
+      "path": "ml/data/raw/realwaste/Plastic/Plastic_502.jpg",
+      "source": "realwaste",
+      "raw_label": "Plastic",
+      "true_label": "plastic",
+      "pred_label": "glass",
+      "confidence": 0.7338
+    },
+    {
+      "path": "ml/data/raw/trashnet/glass/glass109.jpg",
+      "source": "trashnet",
+      "raw_label": "glass",
+      "true_label": "glass",
+      "pred_label": "plastic",
+      "confidence": 0.7329
+    }
+  ]
+}

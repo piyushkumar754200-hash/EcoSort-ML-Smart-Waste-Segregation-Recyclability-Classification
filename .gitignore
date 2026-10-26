@@ -1,0 +1,43 @@
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+ml/data/raw/
+ml/data/processed/
+artifacts/*.db
+artifacts/*.db-shm
+artifacts/*.db-wal
+artifacts/thumbnails/
+.pytest_cache/
+.coverage
+.ruff_cache/
+.env
+.env.local
+
+# Environment secrets
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+coverage/
+
+# Local databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# Python cache
+venv/
+.pytest_cache/
+
+# Backup files
+*.backup
+
+# Temporary media and AI Studio working files
+.tempmediaStorage/
+**/.tempmediaStorage/
+.aistudio/

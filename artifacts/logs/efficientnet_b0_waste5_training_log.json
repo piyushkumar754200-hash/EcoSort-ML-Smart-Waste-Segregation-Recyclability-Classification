@@ -1,0 +1,139 @@
+{
+  "experiment_name": "efficientnet_b0_waste5",
+  "backbone": "efficientnet_b0",
+  "class_names": [
+    "glass",
+    "metal",
+    "organic",
+    "paper",
+    "plastic"
+  ],
+  "image_size": 224,
+  "best_epoch": 5,
+  "best_val_macro_f1": 0.8879,
+  "temperature": 1.0,
+  "val_ece_before": 0.0347,
+  "val_ece_after": 0.0347,
+  "wall_clock_seconds": 179.32,
+  "device": "cpu",
+  "seed": 42,
+  "git_commit": "unknown",
+  "manifest_sha256": "48f418c015a290475f76a42d0acf46bbad97d10b3d1d7a22497780666554a6f6",
+  "package_versions": {
+    "torch": "2.5.1+cpu",
+    "torchvision": "0.20.1+cpu",
+    "numpy": "2.2.1"
+  },
+  "is_smoke_test": false,
+  "config_snapshot": {
+    "experiment_name": "efficientnet_b0_waste5",
+    "backbone": "efficientnet_b0",
+    "pretrained": true,
+    "num_classes": 5,
+    "class_names": [
+      "glass",
+      "metal",
+      "organic",
+      "paper",
+      "plastic"
+    ],
+    "seed": 42,
+    "deterministic": true,
+    "data": {
+      "manifest_dir": "ml/data/splits",
+      "image_size": 224,
+      "batch_size": 24,
+      "num_workers": 0,
+      "max_samples_per_class_train": 180,
+      "max_samples_per_class_val": 95
+    },
+    "training": {
+      "warmup_epochs": 2,
+      "finetune_epochs": 4,
+      "learning_rate_head": 0.0035,
+      "learning_rate_finetune": 0.0009,
+      "weight_decay": 0.0001,
+      "label_smoothing": 0.015,
+      "early_stopping_patience": 3,
+      "unfreeze_last_n_blocks": 2
+    },
+    "calibration": {
+      "enable_temperature_scaling": true,
+      "initial_temperature": 1.0
+    },
+    "output": {
+      "checkpoint_dir": "artifacts/models",
+      "checkpoint_name": "efficientnet_b0_best.pt",
+      "logs_dir": "artifacts/logs",
+      "reports_dir": "artifacts/reports"
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "stage": "warmup",
+      "train_loss": 0.739,
+      "train_acc": 0.7336,
+      "train_macro_f1": 0.7343,
+      "val_loss": 0.4531,
+      "val_acc": 0.8463,
+      "val_macro_f1": 0.8454,
+      "epoch_seconds": 1.43
+    },
+    {
+      "epoch": 2,
+      "stage": "warmup",
+      "train_loss": 0.4083,
+      "train_acc": 0.8871,
+      "train_macro_f1": 0.8893,
+      "val_loss": 0.4272,
+      "val_acc": 0.8611,
+      "val_macro_f1": 0.8602,
+      "epoch_seconds": 1.55
+    },
+    {
+      "epoch": 3,
+      "stage": "finetune",
+      "train_loss": 0.5136,
+      "train_acc": 0.835,
+      "train_macro_f1": 0.8376,
+      "val_loss": 0.4542,
+      "val_acc": 0.8653,
+      "val_macro_f1": 0.865,
+      "epoch_seconds": 4.8
+    },
+    {
+      "epoch": 4,
+      "stage": "finetune",
+      "train_loss": 0.2039,
+      "train_acc": 0.9642,
+      "train_macro_f1": 0.9654,
+      "val_loss": 0.4363,
+      "val_acc": 0.88,
+      "val_macro_f1": 0.8796,
+      "epoch_seconds": 4.89
+    },
+    {
+      "epoch": 5,
+      "stage": "finetune",
+      "train_loss": 0.1202,
+      "train_acc": 0.998,
+      "train_macro_f1": 0.9981,
+      "val_loss": 0.4053,
+      "val_acc": 0.8884,
+      "val_macro_f1": 0.8879,
+      "epoch_seconds": 4.75
+    },
+    {
+      "epoch": 6,
+      "stage": "finetune",
+      "train_loss": 0.1058,
+      "train_acc": 1.0,
+      "train_macro_f1": 1.0,
+      "val_loss": 0.3938,
+      "val_acc": 0.8863,
+      "val_macro_f1": 0.8855,
+      "epoch_seconds": 4.81
+    }
+  ]
+}

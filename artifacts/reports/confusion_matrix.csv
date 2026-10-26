@@ -1,0 +1,6 @@
+true\pred,glass,metal,organic,paper,plastic
+glass,131,11,0,0,7
+metal,2,130,3,6,12
+organic,0,0,146,1,0
+paper,2,2,0,260,2
+plastic,15,10,1,9,116

@@ -1,0 +1,122 @@
+{
+  "model_version": "2.0.0+20261025.a38e0e76",
+  "total_samples": 171,
+  "accuracy": 0.8772,
+  "macro_precision": 0.8769,
+  "macro_recall": 0.8783,
+  "macro_f1": 0.8758,
+  "uncertain_rate": 0.1053,
+  "mean_confidence": 0.8399,
+  "per_class": [
+    {
+      "category": "glass",
+      "accuracy": 0.8824,
+      "precision": 0.8571,
+      "recall": 0.8824,
+      "f1": 0.8696,
+      "support": 34
+    },
+    {
+      "category": "metal",
+      "accuracy": 0.8824,
+      "precision": 0.8108,
+      "recall": 0.8824,
+      "f1": 0.8451,
+      "support": 34
+    },
+    {
+      "category": "organic",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 34
+    },
+    {
+      "category": "paper",
+      "accuracy": 0.9412,
+      "precision": 0.8889,
+      "recall": 0.9412,
+      "f1": 0.9143,
+      "support": 34
+    },
+    {
+      "category": "plastic",
+      "accuracy": 0.6857,
+      "precision": 0.8276,
+      "recall": 0.6857,
+      "f1": 0.75,
+      "support": 35
+    }
+  ],
+  "confusion_matrix": [
+    [
+      30,
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      30,
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      0,
+      34,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      32,
+      1
+    ],
+    [
+      4,
+      5,
+      0,
+      2,
+      24
+    ]
+  ],
+  "class_names": [
+    "glass",
+    "metal",
+    "organic",
+    "paper",
+    "plastic"
+  ],
+  "plastic_bottle_grass_01": {
+    "path": "ml/data/field_eval/plastic/plastic_bottle_grass_01.jpg",
+    "true_category": "plastic",
+    "predicted_top1": "plastic",
+    "returned_category": "plastic",
+    "status": "ok",
+    "confidence": 0.8606,
+    "confidence_level": "HIGH",
+    "top_k": [
+      {
+        "label": "plastic",
+        "category": "plastic",
+        "probability": 0.8606
+      },
+      {
+        "label": "glass",
+        "category": "glass",
+        "probability": 0.1262
+      },
+      {
+        "label": "paper",
+        "category": "paper",
+        "probability": 0.0066
+      }
+    ]
+  }
+}

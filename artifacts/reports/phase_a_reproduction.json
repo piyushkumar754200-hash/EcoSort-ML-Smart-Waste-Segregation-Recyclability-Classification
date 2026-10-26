@@ -1,0 +1,105 @@
+{
+  "fixture_path": "tests/fixtures/field/plastic_bottle_grass_01.jpg",
+  "dimensions": {
+    "width": 194,
+    "height": 259
+  },
+  "cli_output": {
+    "status": "uncertain",
+    "category": "glass",
+    "confidence": 0.4582,
+    "top_k": [
+      {
+        "label": "glass",
+        "category": "glass",
+        "probability": 0.4582
+      },
+      {
+        "label": "metal",
+        "category": "metal",
+        "probability": 0.2135
+      },
+      {
+        "label": "plastic",
+        "category": "plastic",
+        "probability": 0.179
+      }
+    ]
+  },
+  "pytorch_output": {
+    "top1": "glass",
+    "confidence": 0.4582,
+    "status": "uncertain",
+    "top_k": [
+      {
+        "category": "glass",
+        "probability": 0.4582
+      },
+      {
+        "category": "metal",
+        "probability": 0.2135
+      },
+      {
+        "category": "plastic",
+        "probability": 0.179
+      }
+    ]
+  },
+  "onnx_output": {
+    "top1": "glass",
+    "confidence": 0.4582,
+    "status": "uncertain",
+    "top_k": [
+      {
+        "category": "glass",
+        "probability": 0.4582
+      },
+      {
+        "category": "metal",
+        "probability": 0.2135
+      },
+      {
+        "category": "plastic",
+        "probability": 0.179
+      }
+    ]
+  },
+  "api_output": {
+    "status": "uncertain",
+    "category": "glass",
+    "detected_item": "glass",
+    "recyclability_class": "Recyclable",
+    "bin": "Blue Recycling Bin or Dedicated Glass Drop-Off",
+    "confidence": 0.4582,
+    "top_k": [
+      {
+        "label": "glass",
+        "category": "glass",
+        "probability": 0.4582
+      },
+      {
+        "label": "metal",
+        "category": "metal",
+        "probability": 0.2135
+      },
+      {
+        "label": "plastic",
+        "category": "plastic",
+        "probability": 0.179
+      }
+    ],
+    "bug_returned_glass_disposal_tips_when_uncertain": true
+  },
+  "all_four_agree": true,
+  "v1_letterbox_comparison": {
+    "top1": "plastic",
+    "confidence": 0.3842,
+    "probabilities": {
+      "glass": 0.3422,
+      "metal": 0.1685,
+      "organic": 0.0568,
+      "paper": 0.0483,
+      "plastic": 0.3842
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "file": "tests/fixtures/field/plastic_bottle_grass_01.jpg",
+  "status": "ok",
+  "category": "plastic",
+  "predicted_top1": "plastic",
+  "detected_item": "plastic",
+  "recyclability_class": "Recyclable",
+  "bin": "Blue Recycling Bin (Containers & Plastics)",
+  "confidence": 0.8606,
+  "confidence_level": "HIGH",
+  "top_k": [
+    {
+      "label": "plastic",
+      "category": "plastic",
+      "probability": 0.8606
+    },
+    {
+      "label": "glass",
+      "category": "glass",
+      "probability": 0.1262
+    },
+    {
+      "label": "paper",
+      "category": "paper",
+      "probability": 0.0066
+    }
+  ],
+  "probabilities": {
+    "glass": 0.1262,
+    "metal": 0.0005,
+    "organic": 0.0062,
+    "paper": 0.0066,
+    "plastic": 0.8606
+  },
+  "disposal_tips": [
+    "Rigid bottles, jugs, and tubs (PET #1, HDPE #2, PP #5) are widely recyclable.",
+    "Avoid placing soft plastic bags, bubble wrap, or styrofoam in curbside recycling.",
+    "Do not bag recyclables\u2014place items loose into the recycling bin."
+  ],
+  "prep_steps": [
+    "Empty and rinse out any remaining liquid or food residue.",
+    "Remove non-recyclable film wraps or pumps if attached.",
+    "Keep plastic caps screwed on tightly if accepted by your local facility."
+  ],
+  "safe_handling_advice": [],
+  "quality_warnings": [
+    "Image is small (194x259). Larger photos (>= 224 px on the shorter side) usually give better results.",
+    "Dominant background color/texture detected around the edges. Placing the item on a plain, neutral surface improves accuracy on transparent items."
+  ],
+  "inference_ms": 31.72,
+  "model_version": "2.0.0+20261025.a38e0e76"
+}

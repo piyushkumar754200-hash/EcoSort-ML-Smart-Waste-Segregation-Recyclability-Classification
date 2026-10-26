@@ -1,0 +1,16 @@
+{
+  "model_name": "EcoSort ML Waste Classifier",
+  "model_version": "1.0.0+20261025.716d13ef",
+  "architecture": "efficientnet_b0",
+  "is_smoke_test": false,
+  "weights_sha256": "716d13ef017ab1038326a734df9a4f8b92045643ef84ef44e239604ca8913a93",
+  "input_size": 224,
+  "preprocessing": {
+    "resize": 256,
+    "center_crop": 224,
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225]
+  },
+  "class_names": ["glass", "metal", "organic", "paper", "plastic"],
+  "temperature": 1.0
+}

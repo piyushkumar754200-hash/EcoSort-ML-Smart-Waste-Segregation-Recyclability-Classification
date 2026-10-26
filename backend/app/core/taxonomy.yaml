@@ -1,0 +1,478 @@
+version: "2.0.0"
+disclaimer: "Disposal guidance provided by EcoSort ML is general reference advice. Local municipal recycling rules, accepted resin codes, hazardous collection events, and composting capabilities vary by jurisdiction. Never place special or hazardous waste into curbside bins."
+
+categories:
+  - plastic
+  - paper
+  - metal
+  - glass
+  - organic
+
+recyclability_classes:
+  - Recyclable
+  - Compostable
+  - Non-recyclable
+  - Special handling
+
+# Five primary streams matrix
+primary_streams:
+  plastic:
+    name: "Plastic"
+    category: "plastic"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Containers & Plastics)"
+    badge_color: "blue"
+    examples:
+      - "Water bottles & beverage bottles (PET #1)"
+      - "Milk jugs & detergent bottles (HDPE #2)"
+      - "Rigid shampoo & lotion bottles"
+      - "Food storage tubs & yogurt containers (PP #5)"
+      - "Clean rigid plastic clamshells (if locally accepted)"
+    prep_steps:
+      - "Empty out all remaining liquids and rinse food residue."
+      - "Keep caps and lids screwed on tightly to avoid loss during sorting."
+      - "Remove non-recyclable spray pumps or plastic wrap labels."
+    contamination_guidance:
+      - "Do NOT put soft plastic bags, shrink wrap, chip packets, or bubble wrap in curbside bins (they jam sorting conveyors)."
+      - "No styrofoam/expanded polystyrene (#6), plastic straws, or disposable cutlery."
+      - "Never bag recyclables—place all plastic items loose in the bin."
+    local_acceptance: "Curbside programs almost universally accept rigid plastics #1 (PET) and #2 (HDPE). Plastics #3 (PVC), #4 (LDPE), #5 (PP), and #7 (other) depend on local MRF optical sorting equipment."
+
+  paper:
+    name: "Paper & Cardboard"
+    category: "paper"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Mixed Paper & Fiber)"
+    badge_color: "amber"
+    examples:
+      - "Corrugated cardboard boxes & shipping cartons"
+      - "Newspapers, magazines, and flyers"
+      - "Clean office printer paper & mail"
+      - "Paperboard cereal and pantry boxes"
+      - "Paper towel rolls & clean brown grocery bags"
+    prep_steps:
+      - "Ensure all paper and cardboard are clean, dry, and free of food grease."
+      - "Flatten all corrugated cardboard boxes to conserve bin space."
+      - "Remove plastic shipping tape, bubble inserts, or wax liners."
+    contamination_guidance:
+      - "Greasy pizza box bottoms, used napkins, paper towels, and sanitary tissues are contaminated and belong in compost or general waste."
+      - "Thermal receipts contain BPA/BPS and must NOT be recycled."
+      - "Wax-coated or foil-lined beverage cartons require specialized hydropulping."
+    local_acceptance: "Widely accepted curbside. Dry clean fiber is baled and pulped up to 5–7 times to create new paperboard and newsprint."
+
+  metal:
+    name: "Metal"
+    category: "metal"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Metals & Cans)"
+    badge_color: "slate"
+    examples:
+      - "Aluminum beverage and soda cans"
+      - "Tin and steel food cans (soup, tuna, pet food)"
+      - "Clean aluminum pie pans & baking trays"
+      - "Clean aluminum foil (balled up)"
+      - "Metal jar lids and bottle caps"
+    prep_steps:
+      - "Empty and rinse beverage and food cans."
+      - "Push tin can lids inside the can or detach carefully."
+      - "Scrunch aluminum foil into a firm ball at least 2 inches (5 cm) wide so automated sorting screens capture it."
+    contamination_guidance:
+      - "Pressurized aerosol cans with leftover product are hazardous (recycle only when completely empty)."
+      - "Do NOT put scrap metal wires, coat hangers, metal pipes, or electronics in curbside bins."
+      - "No paint cans with wet paint residues."
+    local_acceptance: "Metals have infinite recyclability without quality loss. Aluminum and ferrous steel are automatically separated via eddy-current separators and industrial magnets."
+
+  glass:
+    name: "Glass"
+    category: "glass"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin or Dedicated Glass Drop-Off"
+    badge_color: "teal"
+    examples:
+      - "Clear, green, and amber beverage bottles"
+      - "Glass food jars (pasta sauce, jam, condiments)"
+      - "Cosmetic & skincare glass containers (cleaned)"
+    prep_steps:
+      - "Empty out contents and give a quick rinse."
+      - "Remove metal or plastic lids and recycle them in their respective streams."
+      - "Paper labels can remain attached; they burn off during high-temperature kiln remelting."
+    contamination_guidance:
+      - "Do NOT place broken window glass, mirrors, Pyrex cookware, ceramics, porcelain, or light bulbs in glass recycling (they have different chemical formulations and melting temperatures)."
+      - "Never place broken container glass loose in the bin if it poses laceration risks to collection staff."
+    local_acceptance: "100% recyclable indefinitely. Some municipalities require separate glass caddies or neighborhood drop-off igloos to prevent glass shards from contaminating paper bales."
+
+  organic:
+    name: "Organic Waste"
+    category: "organic"
+    recyclability_class: "Compostable"
+    bin: "Green Organics / Compost Bin"
+    badge_color: "emerald"
+    examples:
+      - "Fruit and vegetable peels, cores, and scraps (banana peels, citrus, apple cores)"
+      - "Coffee grounds, unbleached filters, and tea bags (plastic-free)"
+      - "Eggshells and nut shells"
+      - "Yard waste: leaves, grass clippings, weeds, small plant trimmings"
+      - "Food-soiled paper napkins and shredded unprinted cardboard"
+    prep_steps:
+      - "Remove all plastic PLU produce stickers, twist ties, and rubber bands."
+      - "Separate organic food matter from any plastic wrapping or packaging."
+      - "Drain excess liquids into the sink before placing solids in the kitchen caddy."
+    contamination_guidance:
+      - "No plastic bags, plastic wrap, or conventional packaging."
+      - "Check local rules regarding cooked meat, bones, and dairy (accepted in industrial aerobic/anaerobic digesters, but avoided in backyard worm bins)."
+      - "Only certified BPI/EN 13432 compostable liners if permitted locally."
+    local_acceptance: "Organic waste diversion prevents anaerobic decomposition in landfills, directly eliminating fugitive methane emissions and generating nutrient-rich humus for soil regeneration."
+
+# Special waste safety streams
+special_waste_streams:
+  batteries:
+    name: "Batteries (Alkaline, Lithium-Ion, Rechargeable, Car)"
+    category: "special_waste"
+    recyclability_class: "Special handling"
+    recommended_collection: "Designated Battery Recycling Drop-Off / Retail Take-Back / Municipal HHW Kiosk"
+    warning: "FIRE & TOXICITY HAZARD: Never throw batteries in curbside recycling or trash. Lithium-ion batteries ignite under compaction in garbage trucks and recycling sorting facilities."
+    safe_handling:
+      - "Tape the positive terminals (+ terminal or contact points) with clear electrical or duct tape to prevent short circuits."
+      - "Store spent batteries in a cool, dry, non-conductive plastic container until drop-off."
+      - "Never puncture, crush, or disassemble damaged or swollen battery cells."
+    local_acceptance: "Many hardware stores (Home Depot, Lowe's), electronics retailers (Best Buy), and municipal drop-offs accept household batteries free of charge under stewardship programs (e.g., Call2Recycle)."
+
+  electronic_waste:
+    name: "Electronic Waste (E-Waste, Old Mobile Phones, Laptops, Chargers)"
+    category: "special_waste"
+    recyclability_class: "Special handling"
+    recommended_collection: "Certified E-Waste Recycling Depot / Retail Electronics Take-Back / Community E-Waste Drive"
+    warning: "DATA PRIVACY & HEAVY METALS: Contains recoverable gold, silver, and copper alongside lead, cadmium, and brominated flame retardants. Never discard in curbside bins."
+    safe_handling:
+      - "Perform a factory reset and remove SIM/microSD memory cards to protect your personal data."
+      - "Keep rechargeable lithium batteries installed inside device or detached and taped if removable."
+      - "Bundle detachable cables and power adapters together."
+    local_acceptance: "Accepted at municipal e-waste depots, electronics retailers, and authorized refurbishment centers under WEEE/R2/e-Stewards certified recycling standards."
+
+  expired_medicines:
+    name: "Expired & Unused Medicines (Pills, Liquids, Ointments)"
+    category: "special_waste"
+    recyclability_class: "Special handling"
+    recommended_collection: "Authorized Pharmacy Drug Take-Back Kiosk / National Drug Take-Back Day / Police Station Drop-Box"
+    warning: "ENVIRONMENTAL & DRUG SAFETY HAZARD: Never flush medications down the toilet or pour down drains. Wastewater treatment plants cannot remove active pharmaceuticals, poisoning waterways and aquatic life."
+    safe_handling:
+      - "Leave pills in original child-proof prescription containers with personal patient info blacked out with permanent marker."
+      - "Keep liquids sealed in leak-proof bags."
+      - "If no take-back program exists, mix uncrushed pills with undesirable substance (used coffee grounds, kitty litter), seal in a container, and place in household trash."
+    local_acceptance: "Most major retail pharmacies (CVS, Walgreens, hospital outpatient pharmacies) provide secure drop-boxes in store lobbies year-round."
+
+  hazardous_chemicals:
+    name: "Hazardous Chemicals & Paint Residues (Solvents, Motor Oil, Pesticides, Bleach)"
+    category: "special_waste"
+    recyclability_class: "Special handling"
+    recommended_collection: "Municipal Household Hazardous Waste (HHW) Collection Facility / Scheduled HazMat Event"
+    warning: "SEVERE HEALTH, FLAMMABILITY & GROUNDWATER DANGER: Corrosive, flammable, and poisonous. Liquid chemicals poured down storm drains or placed in curbside bins contaminate drinking water and endanger sanitation crews."
+    safe_handling:
+      - "Keep chemicals in their original labeled containers whenever possible."
+      - "Never mix chemical products together (mixing bleach and ammonia produces lethal chloramine gas)."
+      - "Transport containers upright and secured in a sturdy cardboard box or secondary plastic tray."
+    local_acceptance: "Municipalities host dedicated HHW drop-off sites or seasonal mobile collection events. Latex paint can be dried with paint hardener or kitty litter and disposed of as solid waste in some areas."
+
+  sanitary_pads:
+    name: "Sanitary Pads, Tampons, Diapers & Incontinence Products"
+    category: "special_waste"
+    recyclability_class: "Non-recyclable"
+    recommended_collection: "Black / Gray General Waste Bin (Solid Sanitary Landfill or High-Temp Waste-to-Energy)"
+    warning: "BIOHAZARD & SEWER BLOCKAGE: Never flush sanitary pads, tampons, or wet wipes down the toilet. They cause severe 'fatberg' blockages in plumbing and municipal sewer mains."
+    safe_handling:
+      - "Wrap used pads or diapers securely in toilet paper, paper towels, or designated disposal wrapper."
+      - "Place inside a lined waste bin with a secure lid."
+      - "Wash hands thoroughly with soap and water after disposal."
+    local_acceptance: "Sanitary hygiene products are classified as non-recyclable residual municipal solid waste and are routed to sanitary landfills or waste-to-energy incineration facilities."
+
+  broken_glass:
+    name: "Broken Glass (Mirrors, Window Panes, Drinking Tumblers, Pyrex)"
+    category: "special_waste"
+    recyclability_class: "Special handling"
+    recommended_collection: "General Waste Bin (Thickly Wrapped & Marked) or Specialized C&D Facility"
+    warning: "LACERATION HAZARD TO WORKERS: Never put broken non-container glass in curbside glass recycling bins. Ceramics, window glass, and Pyrex have higher melting points and ruin container glass remelt batches."
+    safe_handling:
+      - "Wrap broken glass shards in multiple layers of heavy newspaper, or place inside an empty puncture-proof cardboard box or rigid plastic jug."
+      - "Seal all edges securely with heavy-duty packaging duct tape."
+      - "Clearly write 'SHARP: BROKEN GLASS' on the outside so waste handlers avoid injury."
+    local_acceptance: "Window glass, mirrors, and tableware cannot be accepted at container glass facilities; they belong in general waste once wrapped securely."
+
+  fluorescent_tubes:
+    name: "Fluorescent Tubes, CFL Bulbs & Mercury Lamps"
+    category: "special_waste"
+    recyclability_class: "Special handling"
+    recommended_collection: "Hardware Store Light Bulb Drop-Off / Municipal Hazardous Waste Facility"
+    warning: "MERCURY POISONING RISK: Fluorescent tubes and compact fluorescent lamps (CFLs) contain toxic elemental mercury vapor that disperses into the air when crushed in trash trucks."
+    safe_handling:
+      - "Handle gently to prevent tube breakage."
+      - "If broken: evacuate the room for 15 minutes, ventilate, scoop glass and phosphor powder with stiff cardboard (do NOT vacuum, which atomizes mercury), and seal in a glass jar."
+      - "Transport unbroken tubes in original sleeves or bubble wrap."
+    local_acceptance: "Accepted at major home improvement retailers (Home Depot, IKEA, Lowe's) and all municipal HHW drop-off depots."
+
+  construction_debris:
+    name: "Construction & Demolition Debris (Concrete, Drywall, Scrap Lumber, Tile)"
+    category: "special_waste"
+    recyclability_class: "Special handling"
+    recommended_collection: "Authorized Construction & Demolition (C&D) Recycling Facility / Rented Roll-Off Dumpster"
+    warning: "BIN OVERLOAD & INERT WASTE: Curbside household bins cannot sustain the weight of bricks, concrete, and soil; heavy debris damages automated truck lifting arms."
+    safe_handling:
+      - "Separate clean untreated lumber, scrap drywall, and masonry into distinct piles for specialized recyclers."
+      - "Inspect pre-1980 building materials for asbestos or lead-based paint hazards before disturbing."
+      - "Arrange a dedicated roll-off dumpster or transport to a licensed transfer station."
+    local_acceptance: "C&D facilities crush concrete and brick into road aggregate base and chip clean lumber into landscaping mulch."
+
+# Material directory for exact search and keyword lookups
+material_directory:
+  - id: "plastic_bottle"
+    name: "Plastic Water / Beverage Bottle"
+    aliases: ["plastic bottles", "water bottle", "water bottles", "pet bottle", "soda bottle", "coke bottle", "plastic drink bottle"]
+    category: "plastic"
+    primary_stream: "plastic"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Containers & Plastics)"
+    explanation: "Made of Polyethylene Terephthalate (PET #1), this clear rigid container is easily shredded, remelted, and spun into recycled fibers or new bottles."
+    prep_steps: ["Empty liquid completely.", "Give a quick rinse.", "Screw plastic cap on tightly."]
+    disposal_tips: ["Accepted in all standard curbside recycling bins.", "Do not crush if your local facility uses optical sorting."]
+    contamination_warnings: ["Remove plastic tamper-evident shrink wraps or straws before recycling."]
+    local_acceptance: "Universally accepted across virtually all municipal curbside recycling systems."
+
+  - id: "newspaper"
+    name: "Newspaper & Print Paper"
+    aliases: ["newspaper", "newspapers", "newsprint", "daily news", "paper flyer", "magazine", "magazines"]
+    category: "paper"
+    primary_stream: "paper"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Mixed Paper & Fiber)"
+    explanation: "Composed of clean, unlaminated wood pulp fiber that can be recycled into fresh newsprint, egg cartons, and paperboard packaging."
+    prep_steps: ["Keep dry and free from oil or grease.", "Remove plastic delivery bags and rubber bands."]
+    disposal_tips: ["Stack loose or inside a paper bag in your recycling bin."]
+    contamination_warnings: ["Wet or moldy newspaper degrades paper pulp batches and cannot be recycled."]
+    local_acceptance: "Accepted in all curbside fiber recycling programs."
+
+  - id: "cardboard"
+    name: "Cardboard Box & Shipping Cartons"
+    aliases: ["cardboard", "cardboard box", "cardboard boxes", "amazon box", "shipping box", "cereal box", "paperboard"]
+    category: "paper"
+    primary_stream: "paper"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Flattened Cardboard)"
+    explanation: "Corrugated cardboard has long, durable kraft fibers that maintain structural strength through 5 to 7 recycling cycles."
+    prep_steps: ["Flatten and break down all boxes.", "Remove excess plastic shipping tape and styrofoam packing peanuts."]
+    disposal_tips: ["Place flattened boxes inside the bin or bundle neatly beside it if permitted."]
+    contamination_warnings: ["Greasy sections of pizza boxes must be torn off and composted or discarded."]
+    local_acceptance: "Universally accepted across municipal fiber collection programs."
+
+  - id: "metal_can"
+    name: "Metal Beverage / Food Can"
+    aliases: ["metal cans", "metal can", "soda can", "aluminum can", "beer can", "tin can", "soup can", "canned food"]
+    category: "metal"
+    primary_stream: "metal"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Metals & Cans)"
+    explanation: "Aluminum and tin-plated steel are 100% infinitely recyclable without losing strength or purity, saving 95% of energy vs virgin extraction."
+    prep_steps: ["Empty liquids or food residues.", "Rinse lightly.", "Push detached tin lids safely inside the can."]
+    disposal_tips: ["Place loose in your curbside blue bin. Magnets and eddy currents easily sort steel and aluminum."]
+    contamination_warnings: ["Paint cans with wet chemical paint or pressurized fuel canisters are hazardous and forbidden."]
+    local_acceptance: "Highest value commodity in municipal curbside recycling programs."
+
+  - id: "glass_jar"
+    name: "Glass Food & Beverage Jar"
+    aliases: ["glass jars", "glass jar", "jam jar", "pasta sauce jar", "pickle jar", "glass bottle", "wine bottle", "beer bottle"]
+    category: "glass"
+    primary_stream: "glass"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin or Dedicated Glass Drop-Off"
+    explanation: "Container glass (soda-lime) can be remelted in cullet furnaces an unlimited number of times without degrading quality."
+    prep_steps: ["Empty remaining contents and rinse.", "Remove metal or plastic lid and recycle separately."]
+    disposal_tips: ["Check if your city collects glass mixed in the blue bin or requires a separate drop-off container."]
+    contamination_warnings: ["Do NOT mix drinking glasses, Pyrex, ceramics, or light bulbs with container glass."]
+    local_acceptance: "Recycled worldwide. Some cities use dedicated drop-off pods to avoid broken glass in paper streams."
+
+  - id: "banana_peel"
+    name: "Banana Peel & Fruit Scraps"
+    aliases: ["banana peels", "banana peel", "fruit peel", "apple core", "orange peel", "food scraps", "food waste", "vegetable scraps"]
+    category: "organic"
+    primary_stream: "organic"
+    recyclability_class: "Compostable"
+    bin: "Green Organics / Compost Bin"
+    explanation: "Pure biodegradable organic matter rich in nitrogen and potassium that decomposes aerobically into fertile compost within weeks."
+    prep_steps: ["Peel off any plastic brand/PLU stickers.", "Place directly in your kitchen food waste caddy."]
+    disposal_tips: ["Compost in your home compost pile or municipal green organics cart."]
+    contamination_warnings: ["Never put fruit in non-compostable plastic bags or mix with plastic produce wraps."]
+    local_acceptance: "Accepted in all municipal compost and yard waste programs."
+
+  - id: "batteries"
+    name: "Household & Rechargeable Batteries"
+    aliases: ["batteries", "battery", "aa batteries", "aa battery", "aaa battery", "lithium battery", "lithium batteries", "car battery", "rechargeable battery"]
+    category: "special_waste"
+    primary_stream: "special_waste"
+    recyclability_class: "Special handling"
+    bin: "Designated Battery Recycling Drop-Off / Hazardous Kiosk"
+    explanation: "Contains corrosive electrolytes and toxic heavy metals (lithium, lead, cadmium). Lithium-ion cells spark and ignite under compaction in regular waste trucks."
+    prep_steps: ["Tape terminals with clear Scotch or electrical tape.", "Place in a non-conductive plastic container."]
+    disposal_tips: ["Drop off at home improvement centers, electronics stores, or municipal hazardous waste drop-offs."]
+    contamination_warnings: ["NEVER discard in curbside recycling or trash carts. Severe truck fire risk."]
+    local_acceptance: "Free drop-off at Call2Recycle partner sites (Home Depot, Lowe's, Staples) nationwide."
+
+  - id: "old_mobile_phones"
+    name: "Old Mobile Phone / E-Waste"
+    aliases: ["old mobile phones", "old mobile phone", "mobile phone", "cell phone", "smartphone", "iphone", "android phone", "old phone", "electronic waste", "e-waste", "laptop", "tablet"]
+    category: "special_waste"
+    primary_stream: "special_waste"
+    recyclability_class: "Special handling"
+    bin: "Certified E-Waste Recycling Depot / Retail Take-Back"
+    explanation: "Contains high-value gold, silver, and rare earths along with hazardous lead, mercury, and flame retardants requiring clean-room dismantling."
+    prep_steps: ["Back up data and perform a full factory reset.", "Remove SIM and external microSD cards."]
+    disposal_tips: ["Take to an electronics retailer (e.g. Best Buy) or municipal e-waste recycling depot."]
+    contamination_warnings: ["Do not toss into household trash or blue recycling bins."]
+    local_acceptance: "Accepted under electronics stewardship take-back programs."
+
+  - id: "expired_medicines"
+    name: "Expired & Unused Medicines"
+    aliases: ["expired medicines", "expired medicine", "prescription pills", "expired pills", "cough syrup", "unused medication", "drugs", "pharmaceuticals"]
+    category: "special_waste"
+    primary_stream: "special_waste"
+    recyclability_class: "Special handling"
+    bin: "Authorized Pharmacy Take-Back Kiosk / HHW Drop-Box"
+    explanation: "Pharmaceuticals contaminate public waterways, kill beneficial bacteria in sewage treatment plants, and enter drinking water supplies if flushed."
+    prep_steps: ["Black out patient names on prescription bottles.", "Keep liquids sealed in a leakproof bag."]
+    disposal_tips: ["Drop into green/blue metal collection kiosks inside local pharmacies or police stations."]
+    contamination_warnings: ["NEVER flush down toilets or pour down sinks."]
+    local_acceptance: "Provided free of charge at participating pharmacies (CVS, Walgreens, hospitals)."
+
+  - id: "sanitary_pads"
+    name: "Sanitary Pads, Tampons & Diapers"
+    aliases: ["sanitary pads", "sanitary pad", "tampons", "tampon", "menstrual pad", "diapers", "diaper", "baby wipes", "incontinence pad"]
+    category: "special_waste"
+    primary_stream: "special_waste"
+    recyclability_class: "Non-recyclable"
+    bin: "Black / Gray General Waste Bin (Wrapped Securely)"
+    explanation: "Contains non-biodegradable superabsorbent polymers, adhesive backings, and biofluids. Poses pathogen contamination and cannot be recycled."
+    prep_steps: ["Wrap used product tightly in toilet paper, newspaper, or disposal sleeve.", "Deposit into a lined waste container."]
+    disposal_tips: ["Destined for municipal sanitary landfill or high-temperature waste-to-energy incineration."]
+    contamination_warnings: ["NEVER flush sanitary pads or wipes down toilets—they cause massive municipal sewer blockages. Keep out of compost and recycling."]
+    local_acceptance: "Accepted only in residual general waste bins."
+
+  - id: "broken_glass"
+    name: "Broken Glass (Mirrors, Window Panes, Tumblers)"
+    category: "special_waste"
+    primary_stream: "special_waste"
+    aliases: ["broken glass", "broken mirror", "broken window", "shattered glass", "pyrex glass", "ceramic shards"]
+    recyclability_class: "Special handling"
+    bin: "General Waste Bin (Thickly Wrapped in Puncture-Proof Box & Labeled)"
+    explanation: "Broken drinking glasses, window glass, and Pyrex cookware have different chemical melting points than bottles and lacerate waste sorting workers."
+    prep_steps: ["Wrap shards thoroughly in multiple layers of newspaper or corrugated cardboard.", "Tape tightly and label 'SHARP: BROKEN GLASS'."]
+    disposal_tips: ["Place the labeled package into your household general waste trash bin."]
+    contamination_warnings: ["NEVER toss loose broken glass into curbside recycling carts."]
+    local_acceptance: "Container glass recyclers reject non-bottle glass. Must be handled safely as protected residual waste."
+
+# Common recycling mistakes for educational guidance
+common_mistakes:
+  - mistake: "Wishcycling plastic bags and film packaging in curbside blue bins"
+    consequence: "Plastic film wraps around rotating screen axles at sorting plants, forcing facility shutdowns multiple times daily."
+    correct_action: "Return clean plastic bags and wraps to grocery store drop-off bins, or place in general waste."
+
+  - mistake: "Placing greasy takeout pizza boxes in clean paper recycling"
+    consequence: "Food grease and cheese oil cannot be washed out with water during pulping, ruining entire batches of recycled paper."
+    correct_action: "Tear off clean box lids for recycling; place the grease-soaked bottom half in the compost green bin or trash."
+
+  - mistake: "Tossing lithium-ion batteries or electronics into household recycling"
+    consequence: "Batteries get crushed by compactor blades, sparking violent fires inside collection trucks and sorting facilities."
+    correct_action: "Always tape battery terminals and take them to a dedicated battery recycling collection bin at a hardware or electronics store."
+
+  - mistake: "Flushing expired medicines or sanitary products down the toilet"
+    consequence: "Pills poison aquatic life, while sanitary pads and wipes form massive 'fatberg' blockages in sewer pipes."
+    correct_action: "Return medications to pharmacy take-back boxes; wrap sanitary pads and dispose of them in the general waste bin."
+
+  - mistake: "Putting ceramics, mirrors, and drinking glasses into bottle recycling"
+    consequence: "These glasses melt at much higher temperatures than soda-lime bottle glass, creating structural defects and weak spots in newly blown bottles."
+    correct_action: "Wrap broken non-bottle glass securely in cardboard and place in general waste."
+
+# Standard label mapping for backward compatibility
+labels:
+  plastic:
+    category: "plastic"
+    detected_item: "plastic"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Containers & Plastics)"
+    prep_steps:
+      - "Empty and rinse out any remaining liquid or food residue."
+      - "Remove non-recyclable film wraps or pumps if attached."
+      - "Keep plastic caps screwed on tightly if accepted by your local facility."
+    disposal_tips:
+      - "Rigid bottles, jugs, and tubs (PET #1, HDPE #2, PP #5) are widely recyclable."
+      - "Avoid placing soft plastic bags, bubble wrap, or styrofoam in curbside recycling."
+      - "Do not bag recyclables—place items loose into the recycling bin."
+    notes: "Classified at the category level as plastic waste. Check the resin identification code (#1–#7) against local municipal guidelines."
+
+  paper:
+    category: "paper"
+    detected_item: "paper"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Mixed Paper & Fiber)"
+    prep_steps:
+      - "Ensure paper and cardboard are clean, dry, and free of grease or food stains."
+      - "Flatten corrugated cardboard boxes to save bin capacity."
+      - "Remove plastic shipping tape, bubble mailers, or wax liners."
+    disposal_tips:
+      - "Clean office paper, newspapers, magazines, mail, and cardboard boxes are highly recyclable."
+      - "Greasy pizza box bottoms, used paper towels, and thermal receipts belong in compost or general waste (Special handling)."
+      - "Shredded paper should be contained in a sealed paper bag if allowed locally."
+    notes: "Classified at the category level as paper/cardboard fiber. Keep dry to preserve fiber recovery value."
+
+  metal:
+    category: "metal"
+    detected_item: "metal"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin (Metals & Cans)"
+    prep_steps:
+      - "Empty and rinse beverage cans, soup cans, and foil trays."
+      - "For tin/steel food cans, push the lid inside or detach carefully."
+      - "Scrunch clean aluminum foil into a ball at least 2 inches wide so sorting screens catch it."
+    disposal_tips:
+      - "Aluminum cans and steel/tin food cans can be recycled infinitely without loss of material quality."
+      - "Aerosol cans must be completely empty before recycling; pressurized or hazardous cans require Special handling."
+      - "Keep sharp scrap metal or electronics out of household curbside bins."
+    notes: "Classified at the category level as metal waste. Aluminum and ferrous steel are separated automatically via eddy currents and magnets at MRFs."
+
+  glass:
+    category: "glass"
+    detected_item: "glass"
+    recyclability_class: "Recyclable"
+    bin: "Blue Recycling Bin or Dedicated Glass Drop-Off"
+    prep_steps:
+      - "Empty liquids and give bottles or jars a quick rinse."
+      - "Remove metal or plastic lids and recycle them separately."
+      - "Paper labels can remain attached—they burn off during kiln remelting."
+    disposal_tips:
+      - "Clear, green, and amber food and beverage glass bottles and jars are 100% recyclable."
+      - "Do NOT place broken window panes, mirrors, Pyrex bakeware, ceramics, or light bulbs in glass recycling—they have different melting points."
+      - "Handle broken glass carefully; wrap non-container broken glass before placing in general waste."
+    notes: "Classified at the category level as container glass."
+
+  organic:
+    category: "organic"
+    detected_item: "organic"
+    recyclability_class: "Compostable"
+    bin: "Green Organics / Compost Bin"
+    prep_steps:
+      - "Remove all produce stickers (PLU labels), rubber bands, and plastic twist ties."
+      - "Separate organic matter from any plastic packaging or foil wraps."
+      - "Drain excess liquids before placing food scraps into your kitchen caddy."
+    disposal_tips:
+      - "Fruit and vegetable scraps, coffee grounds, eggshells, yard trimmings, and leaves compost cleanly."
+      - "Check whether your municipal green bin accepts meat, dairy, or certified compostable bioplastics."
+      - "Diverting organic waste from landfills prevents anaerobic methane emissions."
+    notes: "Classified at the category level as organic/biological material suitable for composting or anaerobic digestion."
+
+  special_waste:
+    category: "special_waste"
+    detected_item: "special waste"
+    recyclability_class: "Special handling"
+    bin: "Designated Hazardous Waste Drop-Off / Specialized Collection Center"
+    prep_steps:
+      - "Keep items in original packaging or securely contained."
+      - "Never mix with standard household trash, recyclables, or compost."
+    disposal_tips:
+      - "Special waste items (batteries, electronics, chemicals, sharps) require certified handling to avoid fire and toxicity."
+    notes: "Classified as special or hazardous waste requiring designated recovery channels."
