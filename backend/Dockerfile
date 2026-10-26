@@ -15,7 +15,7 @@ COPY backend/ ./
 COPY artifacts/models/ /app/artifacts/models/
 COPY artifacts/metrics/ /app/artifacts/metrics/
 
-RUN mkdir -p /app/artifacts/thumbnails
+RUN mkdir -p /app/artifacts/thumbnails /app/artifacts/models /app/artifacts/metrics
 
 EXPOSE 8000
 
